@@ -1,0 +1,18 @@
+# Python dependencies for the ICNF fire PostGIS project.
+# Install into a venv:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#
+# Note: download_icnf.py uses only the standard library (urllib, zipfile,
+# pathlib) and needs none of these. These power the analysis notebook.
+
+# --- database access ---
+SQLAlchemy>=2.0          # engine / connection management
+psycopg2-binary>=2.9     # PostgreSQL driver
+GeoAlchemy2>=0.15        # PostGIS geometry types for SQLAlchemy
+
+# --- data & geospatial ---
+pandas>=2.2              # tabular results (pd.read_sql)
+geopandas>=1.0           # spatial dataframes (geopandas.read_postgis)
+
+# --- visualization & notebook ---
+matplotlib>=3.8          # plots and choropleths
+jupyter>=1.0             # notebook environment
