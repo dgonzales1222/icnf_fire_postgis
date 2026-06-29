@@ -16,8 +16,8 @@ a **PostGIS** database. Shapefiles are loaded into PostgreSQL/PostGIS, the spati
 ## Data sources
 | Dataset | Source | Format |
 |---|---|---|
-| Burned areas 2009–2024 | ICNF — `si.icnf.pt/wfs/areas_ardidas` | Shapefile (WFS SHAPE-ZIP) |
-| Administrative boundaries (CAOP) | DGT — `dados.gov.pt` | Shapefile |
+| Burned areas 2009–2025 | ICNF — `si.icnf.pt/wfs/areas_ardidas` | Shapefile (WFS SHAPE-ZIP) |
+| Administrative boundaries (CAOP 2025, Continente) | DGT — `geo2.dgterritorio.gov.pt/caop` | GeoPackage |
 
 All geometries reprojected to **ETRS89 / PT-TM06 (EPSG:3763)** for area computation.
 
@@ -28,7 +28,8 @@ Python (geopandas, SQLAlchemy, psycopg2) for the notebook.
 ## Structure
 ```
 data/raw/icnf_shp/<year>/   ICNF burned-area shapefiles (git-ignored)
-data/raw/caop_shp/          CAOP boundary shapefiles (git-ignored)
+data/raw/caop/              CAOP 2025 GeoPackage (git-ignored)
+scripts/                    download_icnf.py · download_caop.py
 sql/                        setup, load checks, analysis queries
 notebooks/                  analysis.ipynb (reads from PostGIS)
 ```
@@ -43,8 +44,9 @@ notebooks/                  analysis.ipynb (reads from PostGIS)
 | 2026-06-23 | Created GitHub repository; pushed project structure (sql/, notebooks/) | ✅ Done |
 | 2026-06-24 | Phase 1 — install PostgreSQL + PostGIS, create database (`fire_incidence_portugal`, port 5434) | ✅ Done |
 | 2026-06-29 | Phase 1 — enabled PostGIS 3.6.3 + created `icnf` schema via `sql/01_setup.sql` | ✅ Done |
-| 2026-06-25| Phase 2 — download ICNF + CAOP shapefiles | 🟡 In progress |
-| 2026-06-27 | Phase 3 — load shapefiles into PostGIS (ogr2ogr, EPSG:3763) | 🟡 In progress|
+| 2026-06-29 | Phase 2 — downloaded ICNF burned areas 2009–2025 (`scripts/download_icnf.py`) | ✅ Done |
+| 2026-06-29 | Phase 2 — downloaded CAOP 2025 GeoPackage, all admin/NUTS levels (`scripts/download_caop.py`) | ✅ Done |
+| — | Phase 3 — load shapefiles into PostGIS (ogr2ogr, EPSG:3763) | ⬜ Planned |
 | — | Phase 4 — spatial analysis in SQL (area-weighted joins) | ⬜ Planned |
 | — | Phase 5 — notebook: query PostGIS + visualize | ⬜ Planned |
 | — | Report / write-up | ⬜ Planned |
