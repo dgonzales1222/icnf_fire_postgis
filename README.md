@@ -46,7 +46,7 @@ notebooks/                  analysis.ipynb (reads from PostGIS)
 | 2026-06-29 | Phase 1 — enabled PostGIS 3.6.3 + created `icnf` schema via `sql/01_setup.sql` | ✅ Done |
 | 2026-06-29 | Phase 2 — downloaded ICNF burned areas 2009–2025 (`scripts/download_icnf.py`) | ✅ Done |
 | 2026-06-29 | Phase 2 — downloaded CAOP 2025 GeoPackage, all admin/NUTS levels (`scripts/download_caop.py`) | ✅ Done |
-| — | Phase 3 — load shapefiles into PostGIS (ogr2ogr, EPSG:3763) | ⬜ Planned |
+| 2026-06-29 | Phase 3 — loaded fires (34,236) + 6 CAOP levels into PostGIS via `scripts/load.sh` (ogr2ogr, EPSG:3763, Latin-1→UTF-8 fix) | ✅ Done |
 | — | Phase 4 — spatial analysis in SQL (area-weighted joins) | ⬜ Planned |
 | — | Phase 5 — notebook: query PostGIS + visualize | ⬜ Planned |
 | — | Report / write-up | ⬜ Planned |
