@@ -39,8 +39,8 @@ notebooks/                  analysis.ipynb (reads from PostGIS)
 |---|---|---|
 | 2026-06-15 | Started UPLB weather dashboard (original topic) | ✅ Done |
 | 2026-06-22 | Weather data delayed — decided to change topic | ✅ Done |
-| 2026-06-29 | Pivoted to Portugal wildfire analysis; set up repo + git | ✅ Done |
-| 2026-06-29 | Phase 1 — install PostgreSQL + PostGIS, create database | 🟡 In progress |
+| 2026-06-22 | Pivoted to Portugal wildfire analysis; set up repo + git | ✅ Done |
+| 2026-06-24 | Phase 1 — install PostgreSQL + PostGIS, create database | 🟡 In progress |
 | — | Phase 2 — download ICNF + CAOP shapefiles | ⬜ Planned |
 | — | Phase 3 — load shapefiles into PostGIS (ogr2ogr, EPSG:3763) | ⬜ Planned |
 | — | Phase 4 — spatial analysis in SQL (area-weighted joins) | ⬜ Planned |
