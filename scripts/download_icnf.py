@@ -27,7 +27,7 @@ from pathlib import Path
 
 # --- configuration -------------------------------------------------------
 START_YEAR = 2009
-END_YEAR = 2024  # inclusive
+END_YEAR = 2025  # inclusive
 WFS = "https://si.icnf.pt/wfs/areas_ardidas"
 RAW_DIR = Path("data/raw/icnf_shp")
 # -------------------------------------------------------------------------
@@ -63,3 +63,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
