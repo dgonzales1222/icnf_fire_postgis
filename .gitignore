@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data — downloaded via links, large, reproducible
+data/
+
+# Archives & dumps
+*.zip
+*.sql.bak
+
+# macOS
+.DS_Store
