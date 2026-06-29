@@ -1,5 +1,6 @@
 # load.sh
 # Bash script for loading the data into PostGIS
+# Prompt used: How to fix encoding error in this code?
 
 set -euo pipefail   # stop on first error; treat unset vars as errors
 
